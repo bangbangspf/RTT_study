@@ -1,0 +1,12 @@
+# for module compiling
+import os
+from building import *
+
+cwd = GetCurrentDir()
+src = ['hello.c']
+CPPPATH = [cwd]
+
+
+group = DefineGroup('Hello_Test', src, depend = [''], CPPPATH = CPPPATH)
+
+Return('group')
